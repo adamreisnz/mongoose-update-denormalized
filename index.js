@@ -14,6 +14,6 @@ module.exports = function updateDenormalized(schema) {
     }
 
     //Update
-    return this.update({[`${prop}._id`]: _id}, patch, {multi: true});
+    return this.updateMany({[`${prop}._id`]: _id}, patch);
   };
 };
