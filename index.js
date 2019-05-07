@@ -13,6 +13,11 @@ module.exports = function updateDenormalized(schema) {
       patch[patchKey] = data[key];
     }
 
+    //Array of ID's
+    if (Array.isArray(_id)) {
+      _id = {$in: _id};
+    }
+
     //Update
     return this.updateMany({[`${prop}._id`]: _id}, patch);
   };
