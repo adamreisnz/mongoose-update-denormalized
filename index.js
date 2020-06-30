@@ -9,7 +9,7 @@ module.exports = function updateDenormalized(schema) {
     //Prepare patch
     const patch = {};
     for (const key in data) {
-      const patchKey = isArray ? `${prop}.$.${key}` : `${prop}.${key}`;
+      const patchKey = isArray ? `${prop}.$[].${key}` : `${prop}.${key}`;
       patch[patchKey] = data[key];
     }
 
