@@ -1,7 +1,7 @@
 {
   "name": "@meanie/mongoose-update-denormalized",
   "description": "A plugin for Mongoose to update denormalized data",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "homepage": "https://github.com/meanie/mongoose-update-denormalized",
   "author": {
     "name": "Adam Reis",
